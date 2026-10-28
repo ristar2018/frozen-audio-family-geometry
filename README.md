@@ -249,8 +249,8 @@ caches (the 126 arrays those scripts write are listed in Section 6, and all of t
 rebuild from the public corpora). It carries no author names, affiliations, e-mail
 addresses or absolute local paths, and every script resolves the project root from its
 own location, so it can be shared with reviewers without disclosing more than the
-manuscript already does. A permanent DOI will replace the review-time link on acceptance;
-the archive contents will not change.
+manuscript already does. On acceptance the review-time link is replaced by a public
+repository; the archive contents will not change.
 
 ### Verifying the download
 
