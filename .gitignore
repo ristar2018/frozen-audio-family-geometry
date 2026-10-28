@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# --- Data (downloaded; never commit audio) ---
+data/
+!data/.gitkeep
+
+# --- Extracted embeddings / large caches ---
+results/**/embeddings/
+*.npz
+*.npy
+*.pt
+*.ckpt
+models/
+
+# --- Build / OS ---
+*.log
+*.aux
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+.DS_Store
+Thumbs.db

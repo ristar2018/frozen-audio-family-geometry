@@ -1,0 +1,135 @@
+{
+  "n_assignments": 180180,
+  "family_class_sizes": [
+    2,
+    7,
+    6
+  ],
+  "splits": {
+    "dev": {
+      "beats": {
+        "sil_real_proto": 0.351089,
+        "exact_p": 1.665e-05,
+        "n_ge": 3,
+        "M": 180180,
+        "null_mean": -0.104748,
+        "null_q99": 0.087147,
+        "null_min": -0.251225,
+        "null_max": 0.384867,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": 0.266657
+      },
+      "mert": {
+        "sil_real_proto": 0.110508,
+        "exact_p": 0.00497835,
+        "n_ge": 897,
+        "M": 180180,
+        "null_mean": -0.16188,
+        "null_q99": 0.08261,
+        "null_min": -0.358785,
+        "null_max": 0.287536,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": 0.127355
+      },
+      "ast": {
+        "sil_real_proto": 0.335007,
+        "exact_p": 5.55e-06,
+        "n_ge": 1,
+        "M": 180180,
+        "null_mean": -0.107439,
+        "null_q99": 0.083628,
+        "null_min": -0.259287,
+        "null_max": 0.335007,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": 0.178043
+      },
+      "audiomae": {
+        "sil_real_proto": 0.100234,
+        "exact_p": 0.01257631,
+        "n_ge": 2266,
+        "M": 180180,
+        "null_mean": -0.156045,
+        "null_q99": 0.115152,
+        "null_min": -0.33628,
+        "null_max": 0.437234,
+        "pass_alpha_0.01": false,
+        "sil_segment_sampled6000": -0.270455
+      },
+      "mfcc": {
+        "sil_real_proto": 0.027317,
+        "exact_p": 0.03514819,
+        "n_ge": 6333,
+        "M": 180180,
+        "null_mean": -0.101758,
+        "null_q99": 0.080559,
+        "null_min": -0.241618,
+        "null_max": 0.341522,
+        "pass_alpha_0.01": false,
+        "sil_segment_sampled6000": 0.01315
+      }
+    },
+    "test": {
+      "beats": {
+        "sil_real_proto": 0.353307,
+        "exact_p": 1.665e-05,
+        "n_ge": 3,
+        "M": 180180,
+        "null_mean": -0.103877,
+        "null_q99": 0.085342,
+        "null_min": -0.248761,
+        "null_max": 0.402657,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": 0.260023
+      },
+      "mert": {
+        "sil_real_proto": 0.107782,
+        "exact_p": 0.00521146,
+        "n_ge": 939,
+        "M": 180180,
+        "null_mean": -0.159603,
+        "null_q99": 0.081016,
+        "null_min": -0.354822,
+        "null_max": 0.288676,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": 0.104874
+      },
+      "ast": {
+        "sil_real_proto": 0.319004,
+        "exact_p": 5.55e-06,
+        "n_ge": 1,
+        "M": 180180,
+        "null_mean": -0.107115,
+        "null_q99": 0.08165,
+        "null_min": -0.261505,
+        "null_max": 0.319004,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": 0.171325
+      },
+      "audiomae": {
+        "sil_real_proto": 0.157155,
+        "exact_p": 0.00409035,
+        "n_ge": 737,
+        "M": 180180,
+        "null_mean": -0.151577,
+        "null_q99": 0.108359,
+        "null_min": -0.319734,
+        "null_max": 0.393899,
+        "pass_alpha_0.01": true,
+        "sil_segment_sampled6000": -0.26462
+      },
+      "mfcc": {
+        "sil_real_proto": 0.046183,
+        "exact_p": 0.02297147,
+        "n_ge": 4139,
+        "M": 180180,
+        "null_mean": -0.100386,
+        "null_q99": 0.080144,
+        "null_min": -0.235651,
+        "null_max": 0.323975,
+        "pass_alpha_0.01": false,
+        "sil_segment_sampled6000": 0.012308
+      }
+    }
+  },
+  "elapsed_sec": 68.5
+}

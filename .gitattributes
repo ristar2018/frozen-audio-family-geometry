@@ -1,0 +1,10 @@
+# Byte-exact storage: the archive ships a SHA-256 manifest (MANIFEST_SHA256.txt),
+# so git must not rewrite line endings or the manifest would no longer verify.
+* -text
+
+# explicit binary markers (harmless, documents intent)
+*.png binary
+*.pdf binary
+*.zip binary
+*.npy binary
+*.npz binary

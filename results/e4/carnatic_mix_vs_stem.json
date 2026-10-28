@@ -1,0 +1,566 @@
+{
+ "meta": {
+  "zip": "data\\supp\\saraga-carnatic\\saraga1.5_carnatic.zip",
+  "n_items": 106,
+  "n_raaga": 72,
+  "n_artists": 14,
+  "audio_hours_per_rep": 23.45,
+  "encoder_max_sec": 20.0,
+  "mfcc_max_sec": 10.0,
+  "n_boot": 2000,
+  "seed": 20260501,
+  "caveat": "Carnatic is not Hindustani; the separated stems cover violin (bowed), vocal and percussion only, with no wind or plucked melodic stem, so the three-family test of the main analysis cannot be reproduced here; the stems also carry bleed. This experiment isolates the effect of ensemble mixing format."
+ },
+ "encoders": {
+  "beats": {
+   "mix": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.8535454403660775,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.7889992597615738,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.8816773225641921,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.8423762827586967,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.011169157607380797,
+    "artist_effect": 0.039301039805495375,
+    "sil_all_labels": -0.29775060276037163,
+    "sil_repeated_raagas": -0.33388278587832354,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "violin": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.7714235714215704,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.7017821913440139,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.8407792529610351,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.7551753873643282,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.016248184057242154,
+    "artist_effect": 0.08560386559670685,
+    "sil_all_labels": -0.32162000202920876,
+    "sil_repeated_raagas": -0.3834423070571088,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "vocal": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.8721312542958466,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9070059981507008,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.8998386946935863,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.8447028556746473,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.02742839862119928,
+    "artist_effect": 0.05513583901893904,
+    "sil_all_labels": -0.29637900015018037,
+    "sil_repeated_raagas": -0.3507563976855619,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.018867924528301886,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "delta_raag_effect_violin_minus_mix": {
+    "lo": -0.04609656003493712,
+    "med": 0.007789111220742384,
+    "hi": 0.0599610096696676,
+    "excludes_zero": false
+   },
+   "delta_floor_violin_minus_mix": {
+    "lo": -0.11303847819006589,
+    "med": -0.08659988713553468,
+    "hi": -0.05937842128704888,
+    "excludes_zero": true
+   },
+   "delta_raag_effect_vocal_minus_mix": {
+    "lo": -0.028761626011443046,
+    "med": 0.01604082969201559,
+    "hi": 0.03949750759066919,
+    "excludes_zero": false
+   },
+   "delta_floor_vocal_minus_mix": {
+    "lo": -0.01406991461627836,
+    "med": 0.0022960737882435356,
+    "hi": 0.014654905495202418,
+    "excludes_zero": false
+   }
+  },
+  "mert": {
+   "mix": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9506765562988586,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9467775507724858,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9657712164483188,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9467218469490561,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.0039547093498024655,
+    "artist_effect": 0.019049369499262614,
+    "sil_all_labels": -0.3032191399275514,
+    "sil_repeated_raagas": -0.2904901970924207,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "violin": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9329114536595574,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9395833527558213,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9608802205763418,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.932910722574072,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 7.310854853725957e-07,
+    "artist_effect": 0.027969498002269777,
+    "sil_all_labels": -0.36663237435277435,
+    "sil_repeated_raagas": -0.3927273582586238,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.009433962264150943,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "vocal": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.940135639561955,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9583245450031046,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9615944103525735,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9389187556850296,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.001216883876925423,
+    "artist_effect": 0.022675654667543954,
+    "sil_all_labels": -0.3250625797737224,
+    "sil_repeated_raagas": -0.3435377267523785,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.009433962264150943,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "delta_raag_effect_violin_minus_mix": {
+    "lo": -0.015867749822944276,
+    "med": -0.00398693238718556,
+    "hi": 0.006029944160387424,
+    "excludes_zero": false
+   },
+   "delta_floor_violin_minus_mix": {
+    "lo": -0.020840878142761886,
+    "med": -0.013506930472443446,
+    "hi": -0.007159228022135466,
+    "excludes_zero": true
+   },
+   "delta_raag_effect_vocal_minus_mix": {
+    "lo": -0.010576906026522703,
+    "med": -0.002523574820626151,
+    "hi": 0.005761984364666165,
+    "excludes_zero": false
+   },
+   "delta_floor_vocal_minus_mix": {
+    "lo": -0.012088677593149669,
+    "med": -0.00786586377968318,
+    "hi": -0.003440249328699441,
+    "excludes_zero": true
+   }
+  },
+  "ast": {
+   "mix": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9658976976455427,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9344919543831433,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9708346032078053,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9617618171674192,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.0041358804781235214,
+    "artist_effect": 0.009072786040386194,
+    "sil_all_labels": -0.22761575957568828,
+    "sil_repeated_raagas": -0.2564516403915803,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.02830188679245283,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "violin": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9531764986786209,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9541244949564935,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9677638632990283,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9512091927741432,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.0019673059044776897,
+    "artist_effect": 0.01655467052488513,
+    "sil_all_labels": -0.2754435317312113,
+    "sil_repeated_raagas": -0.3201397422220115,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.02830188679245283,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "vocal": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9686068923297286,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9509735428949275,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.973132844063133,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9635477201946314,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.005059172135097212,
+    "artist_effect": 0.009585123868501633,
+    "sil_all_labels": -0.2440943661147177,
+    "sil_repeated_raagas": -0.28752157772117576,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "delta_raag_effect_violin_minus_mix": {
+    "lo": -0.008335501280706526,
+    "med": -0.002162253824360749,
+    "hi": 0.007856483312953418,
+    "excludes_zero": false
+   },
+   "delta_floor_violin_minus_mix": {
+    "lo": -0.014456247943194504,
+    "med": -0.010542215277138112,
+    "hi": -0.006323751100256514,
+    "excludes_zero": true
+   },
+   "delta_raag_effect_vocal_minus_mix": {
+    "lo": -0.0023755290040003486,
+    "med": 0.0005699000337075488,
+    "hi": 0.005996145394944307,
+    "excludes_zero": false
+   },
+   "delta_floor_vocal_minus_mix": {
+    "lo": -7.500018717436217e-05,
+    "med": 0.0016992104451909462,
+    "hi": 0.00380599950549453,
+    "excludes_zero": false
+   }
+  },
+  "audiomae": {
+   "mix": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9320550675317404,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.889381125686189,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9421021956507822,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9285176287487007,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.0035374387830396925,
+    "artist_effect": 0.01358456690208154,
+    "sil_all_labels": -0.3583233266509577,
+    "sil_repeated_raagas": -0.45330498125796787,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "violin": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9803005412470707,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.9807167413432823,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.988059829095614,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.98054565116847,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": -0.0002451099213993668,
+    "artist_effect": 0.007514177927143928,
+    "sil_all_labels": -0.33451781525645374,
+    "sil_repeated_raagas": -0.3837760431269347,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "vocal": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.9807424086211739,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.975864372128866,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.9844292099337504,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": 0.9796238895955102,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.0011185190256637334,
+    "artist_effect": 0.004805320338240215,
+    "sil_all_labels": -0.3087084982991082,
+    "sil_repeated_raagas": -0.34792895765685783,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.0,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "delta_raag_effect_violin_minus_mix": {
+    "lo": -0.023529942607471037,
+    "med": -0.0033846003720586215,
+    "hi": 0.014755645442735681,
+    "excludes_zero": false
+   },
+   "delta_floor_violin_minus_mix": {
+    "lo": 0.04462129249289991,
+    "med": 0.05210947132547522,
+    "hi": 0.05947920859715961,
+    "excludes_zero": true
+   },
+   "delta_raag_effect_vocal_minus_mix": {
+    "lo": -0.0233725151070586,
+    "med": -0.002249880262359394,
+    "hi": 0.015431122938656238,
+    "excludes_zero": false
+   },
+   "delta_floor_vocal_minus_mix": {
+    "lo": 0.04327488388495226,
+    "med": 0.05124566299745603,
+    "hi": 0.05909939767845632,
+    "excludes_zero": true
+   }
+  },
+  "mfcc": {
+   "mix": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": -0.006706926813614389,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": -0.1677335908304361,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.17892021757719886,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": -0.024231819842205363,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.017524893028590973,
+    "artist_effect": 0.20315203741940424,
+    "sil_all_labels": -0.22741082870642826,
+    "sil_repeated_raagas": -0.2438468746791405,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.009433962264150943,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "violin": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": 0.011968221610197543,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": 0.02619252700553796,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.1467980224198633,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": -0.020543287170288298,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": 0.03251150878048584,
+    "artist_effect": 0.16734130959015162,
+    "sil_all_labels": -0.2100738125001441,
+    "sil_repeated_raagas": -0.23345467960413888,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.018867924528301886,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "vocal": {
+    "pair_stats": {
+     "S_R_same_raag_cross_artist": {
+      "mean": -0.030473040099045185,
+      "n_pairs": 50
+     },
+     "S_RA_same_raag_same_artist": {
+      "mean": -0.08011247862693174,
+      "n_pairs": 1
+     },
+     "D_A_diff_raag_same_artist": {
+      "mean": 0.17183072933834165,
+      "n_pairs": 412
+     },
+     "D_B_diff_raag_cross_artist": {
+      "mean": -0.0229832237153135,
+      "n_pairs": 5102
+     }
+    },
+    "raag_effect": -0.007489816383731685,
+    "artist_effect": 0.19481395305365515,
+    "sil_all_labels": -0.2445903272144205,
+    "sil_repeated_raagas": -0.2843742089172532,
+    "n_items_repeated": 58,
+    "n_raagas_repeated": 24,
+    "raag_retrieval_R1": 0.02830188679245283,
+    "raag_retrieval_chance": 0.018511925952296185
+   },
+   "delta_raag_effect_violin_minus_mix": {
+    "lo": -0.07080396635910578,
+    "med": 0.01792432029376457,
+    "hi": 0.10822551559025423,
+    "excludes_zero": false
+   },
+   "delta_floor_violin_minus_mix": {
+    "lo": -0.004103298114365153,
+    "med": 0.0034002851299761664,
+    "hi": 0.012637238467798434,
+    "excludes_zero": false
+   },
+   "delta_raag_effect_vocal_minus_mix": {
+    "lo": -0.07177724534358942,
+    "med": -0.025921661961210107,
+    "hi": 0.0004440728568723122,
+    "excludes_zero": false
+   },
+   "delta_floor_vocal_minus_mix": {
+    "lo": -0.002258047431687058,
+    "med": 0.0011709489896026826,
+    "hi": 0.005658450236660558,
+    "excludes_zero": false
+   }
+  }
+ }
+}

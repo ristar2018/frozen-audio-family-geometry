@@ -1,0 +1,51 @@
+{
+  "n": 6705,
+  "n_class": 11,
+  "n_family": 6,
+  "encoders": {
+    "beats": {
+      "n_group": 2273,
+      "sil_family_song": 0.13747647404670715,
+      "sil_family_song_p": 0.0004997501249375312,
+      "sil_song_null_q99": -0.010673594847321511,
+      "loo_knn_family_song": 0.9234491860976682,
+      "sil_proto_class": 0.20414495468139648,
+      "sil_proto_class_p": 0.0009995002498750624,
+      "loo_knn_family_sample": 0.9364653243847875,
+      "dcos_sample": 0.12553481665750343
+    },
+    "mert": {
+      "n_group": 2273,
+      "sil_family_song": -0.0879872739315033,
+      "sil_family_song_p": 1.0,
+      "sil_song_null_q99": -0.01662461180239916,
+      "loo_knn_family_song": 0.5921689397272327,
+      "sil_proto_class": -0.30535152554512024,
+      "sil_proto_class_p": 0.4062968515742129,
+      "loo_knn_family_sample": 0.7373601789709172,
+      "dcos_sample": 0.013612587849299196
+    },
+    "ast": {
+      "n_group": 2273,
+      "sil_family_song": 0.1430153250694275,
+      "sil_family_song_p": 0.0004997501249375312,
+      "sil_song_null_q99": -0.01172573688440025,
+      "loo_knn_family_song": 0.8974923009238891,
+      "sil_proto_class": 0.19393807649612427,
+      "sil_proto_class_p": 0.001999000499750125,
+      "loo_knn_family_sample": 0.9140939597315436,
+      "dcos_sample": 0.01795740490158404
+    },
+    "audiomae": {
+      "n_group": 2273,
+      "sil_family_song": -0.11147803068161011,
+      "sil_family_song_p": 1.0,
+      "sil_song_null_q99": -0.019563219137489797,
+      "loo_knn_family_song": 0.3691157061152662,
+      "sil_proto_class": -0.37584173679351807,
+      "sil_proto_class_p": 0.5477261369315343,
+      "loo_knn_family_sample": 0.40313199105145414,
+      "dcos_sample": 0.001162587702274398
+    }
+  }
+}

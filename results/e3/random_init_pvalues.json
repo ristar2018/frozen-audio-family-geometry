@@ -1,0 +1,119 @@
+{
+  "n_assignments": 180180,
+  "split": "test",
+  "encoders": {
+    "beats": {
+      "pretrained": {
+        "sil": 0.353307,
+        "exact_p": 1.665001665001665e-05,
+        "ref_exact_p": 1.665e-05,
+        "validation_ok": true
+      },
+      "seeds": {
+        "seed0": {
+          "sil": 0.028104,
+          "exact_p": 0.034115884115884114,
+          "null_mean": -0.106803,
+          "null_q99": 0.07754
+        },
+        "seed1": {
+          "sil": 0.014214,
+          "exact_p": 0.04558219558219558,
+          "null_mean": -0.113984,
+          "null_q99": 0.078401
+        },
+        "seed2": {
+          "sil": 0.025407,
+          "exact_p": 0.03507048507048507,
+          "null_mean": -0.109458,
+          "null_q99": 0.077094
+        }
+      }
+    },
+    "mert": {
+      "pretrained": {
+        "sil": 0.107782,
+        "exact_p": 0.005211455211455211,
+        "ref_exact_p": 0.00521146,
+        "validation_ok": true
+      },
+      "seeds": {
+        "seed0": {
+          "sil": -0.047043,
+          "exact_p": 0.1628760128760129,
+          "null_mean": -0.130466,
+          "null_q99": 0.097539
+        },
+        "seed1": {
+          "sil": -0.006126,
+          "exact_p": 0.07573537573537574,
+          "null_mean": -0.142804,
+          "null_q99": 0.098151
+        },
+        "seed2": {
+          "sil": -0.026797,
+          "exact_p": 0.11424131424131424,
+          "null_mean": -0.133716,
+          "null_q99": 0.106865
+        }
+      }
+    },
+    "ast": {
+      "pretrained": {
+        "sil": 0.319004,
+        "exact_p": 5.55000555000555e-06,
+        "ref_exact_p": 5.55e-06,
+        "validation_ok": true
+      },
+      "seeds": {
+        "seed0": {
+          "sil": -0.093284,
+          "exact_p": 0.19805194805194806,
+          "null_mean": -0.193963,
+          "null_q99": 0.109005
+        },
+        "seed1": {
+          "sil": -0.094556,
+          "exact_p": 0.19764679764679766,
+          "null_mean": -0.19658,
+          "null_q99": 0.114696
+        },
+        "seed2": {
+          "sil": -0.083091,
+          "exact_p": 0.17763347763347764,
+          "null_mean": -0.194089,
+          "null_q99": 0.112508
+        }
+      }
+    },
+    "audiomae": {
+      "pretrained": {
+        "sil": 0.157155,
+        "exact_p": 0.004090354090354091,
+        "ref_exact_p": 0.00409035,
+        "validation_ok": true
+      },
+      "seeds": {
+        "seed0": {
+          "sil": -0.099424,
+          "exact_p": 0.2070929070929071,
+          "null_mean": -0.190551,
+          "null_q99": 0.113108
+        },
+        "seed1": {
+          "sil": -0.072647,
+          "exact_p": 0.1525141525141525,
+          "null_mean": -0.185373,
+          "null_q99": 0.10923
+        },
+        "seed2": {
+          "sil": -0.093987,
+          "exact_p": 0.1934010434010434,
+          "null_mean": -0.189687,
+          "null_q99": 0.112879
+        }
+      }
+    }
+  },
+  "elapsed_sec": 14.2
+}

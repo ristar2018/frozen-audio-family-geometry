@@ -1,0 +1,19 @@
+{
+  "zip": "data/supp/saraga-carnatic/saraga1.5_carnatic.zip",
+  "items_total": 249,
+  "items_with_stems": 168,
+  "items_with_violin_and_mix": 168,
+  "items_paired_with_raga": 106,
+  "distinct_raaga_paired": 72,
+  "distinct_artists_paired": 14,
+  "raaga_with_multiple_artists": 24,
+  "paired_audio_hours_mix": 36.3,
+  "paired_audio_hours_violin": 36.3,
+  "paired_audio_hours_vocal": 36.3,
+  "stem_set_counts": {
+    "ghatam|mridangam-left|mridangam-right|violin|vocal": 22,
+    "ghatam|mridangam-left|mridangam-right|violin|vocal|vocal-s": 24,
+    "mridangam-left|mridangam-right|violin|vocal": 122
+  },
+  "note": "Carnatic 分轨仅含 violin(bowed)/vocal/mridangam/ghatam；无 wind/plucked 旋律分轨，无法复现论文 3 族检验。"
+}

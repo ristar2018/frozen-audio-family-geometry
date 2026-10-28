@@ -1,0 +1,87 @@
+{
+  "experiment": "E1",
+  "protocol_version": "1.0",
+  "timestamp": "2026-10-20T09:49:18.579493",
+  "meta": {
+    "folkmusic_dev_n": 9573,
+    "folkmusic_test_n": 2393,
+    "folkmusic_dev_missing_files": 0,
+    "nsynth_n": 14800,
+    "nsynth_families": 7,
+    "nsynth_entities": 370,
+    "nsynth_missing_files": 0,
+    "nsynth_per_entity_cap": 40,
+    "split_seed": 20250301,
+    "permutation_seed": 20260501
+  },
+  "confirmatory_rule": {
+    "space": "frozen phi",
+    "scope": "FolkMusic 80% dev only",
+    "permutation": "class-level (class prototype), family-surjective, 6/2/7",
+    "n_permutations": 2000,
+    "p_formula": "(1 + #{sil_perm>=sil_real})/(N+1)",
+    "alpha": 0.01,
+    "conjunction": "all 4 encoders pass"
+  },
+  "H1a_per_encoder": {
+    "beats": {
+      "p_value": 0.0004997501249375312,
+      "sil_real": 0.35108886690386953,
+      "sil_perm_q99": 0.08317576377245116,
+      "passed": true
+    },
+    "mert": {
+      "p_value": 0.00399800099950025,
+      "sil_real": 0.11050835056978991,
+      "sil_perm_q99": 0.07209399382249404,
+      "passed": true
+    },
+    "ast": {
+      "p_value": 0.0004997501249375312,
+      "sil_real": 0.33500703097492324,
+      "sil_perm_q99": 0.08750937747046038,
+      "passed": true
+    },
+    "audiomae": {
+      "p_value": 0.009995002498750625,
+      "sil_real": 0.10023422204737763,
+      "sil_perm_q99": 0.09416114142721163,
+      "passed": true
+    }
+  },
+  "H1a_encoders_present": [
+    "beats",
+    "mert",
+    "ast",
+    "audiomae"
+  ],
+  "H1a_conjunction_verified": true,
+  "cka_pairwise_folkmusic": {
+    "beats": {
+      "beats": 1.0,
+      "mert": 0.4674,
+      "ast": 0.865,
+      "audiomae": 0.1034
+    },
+    "mert": {
+      "beats": 0.4674,
+      "mert": 1.0,
+      "ast": 0.4799,
+      "audiomae": 0.1042
+    },
+    "ast": {
+      "beats": 0.865,
+      "mert": 0.4799,
+      "ast": 1.0,
+      "audiomae": 0.1121
+    },
+    "audiomae": {
+      "beats": 0.1034,
+      "mert": 0.1042,
+      "ast": 0.1121,
+      "audiomae": 1.0
+    }
+  },
+  "cka_n_common_fragments": 9573,
+  "cka_note": "CKA is exploratory evidence and does not enter the confirmatory decision"
+}

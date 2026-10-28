@@ -1,0 +1,91 @@
+{
+ "medley": {
+  "n_clips": 3200,
+  "classes": 8,
+  "class_counts": {
+   "clarinet": 400,
+   "distorted electric guitar": 400,
+   "female singer": 400,
+   "flute": 400,
+   "piano": 400,
+   "tenor saxophone": 400,
+   "trumpet": 400,
+   "violin": 400
+  },
+  "families": {
+   "wind": 1600,
+   "other": 800,
+   "plucked": 400,
+   "bowed": 400
+  },
+  "groups": 227,
+  "splits": {
+   "test": 1955,
+   "training": 745,
+   "validation": 500
+  }
+ },
+ "brid": {
+  "n_clips": 274,
+  "classes": 10,
+  "class_counts": {
+   "Pandeiro": 85,
+   "Repique": 37,
+   "Surdo": 26,
+   "Reco-reco": 24,
+   "Tanta": 23,
+   "Shaker": 22,
+   "Tamborim": 20,
+   "Caixa": 17,
+   "Agogo": 12,
+   "Cuica": 8
+  },
+  "families": {
+   "percussion": 274
+  },
+  "groups": 3,
+  "splits": {
+   "all": 274
+  }
+ },
+ "beijing": {
+  "n_clips": 236,
+  "classes": 4,
+  "class_counts": {
+   "xiaoluo": 65,
+   "naobo": 62,
+   "bangu": 59,
+   "daluo": 50
+  },
+  "families": {
+   "percussion": 236
+  },
+  "groups": 1,
+  "splits": {
+   "all": 236
+  }
+ },
+ "mridangam": {
+  "n_clips": 1200,
+  "classes": 10,
+  "class_counts": {
+   "cha": 133,
+   "tha": 133,
+   "thom": 133,
+   "ta": 133,
+   "thi": 132,
+   "tham": 131,
+   "num": 123,
+   "dheem": 119,
+   "dhin": 119,
+   "bheem": 44
+  },
+  "families": {
+   "percussion": 1200
+  },
+  "groups": 6,
+  "splits": {
+   "all": 1200
+  }
+ }
+}

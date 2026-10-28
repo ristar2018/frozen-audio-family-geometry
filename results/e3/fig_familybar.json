@@ -1,0 +1,77 @@
+{
+  "beats": {
+    "within": 0.650927,
+    "between": 0.42841,
+    "dcos": 0.222517,
+    "per_family_within": {
+      "bowed": 0.66803,
+      "plucked": 0.701833,
+      "wind": 0.582916
+    },
+    "per_family_between": {
+      "bowed": 0.481115,
+      "plucked": 0.397933,
+      "wind": 0.40618
+    }
+  },
+  "mert": {
+    "within": 0.873592,
+    "between": 0.836391,
+    "dcos": 0.037201,
+    "per_family_within": {
+      "bowed": 0.872071,
+      "plucked": 0.887948,
+      "wind": 0.860758
+    },
+    "per_family_between": {
+      "bowed": 0.849821,
+      "plucked": 0.829244,
+      "wind": 0.83011
+    }
+  },
+  "ast": {
+    "within": 0.951347,
+    "between": 0.923272,
+    "dcos": 0.028075,
+    "per_family_within": {
+      "bowed": 0.960119,
+      "plucked": 0.94595,
+      "wind": 0.947971
+    },
+    "per_family_between": {
+      "bowed": 0.933111,
+      "plucked": 0.917651,
+      "wind": 0.919053
+    }
+  },
+  "audiomae": {
+    "within": 0.962151,
+    "between": 0.953413,
+    "dcos": 0.008738,
+    "per_family_within": {
+      "bowed": 0.979253,
+      "plucked": 0.951226,
+      "wind": 0.955974
+    },
+    "per_family_between": {
+      "bowed": 0.958927,
+      "plucked": 0.950333,
+      "wind": 0.950981
+    }
+  },
+  "mfcc": {
+    "within": 0.107994,
+    "between": -0.036184,
+    "dcos": 0.144178,
+    "per_family_within": {
+      "bowed": 0.20867,
+      "plucked": 0.089056,
+      "wind": 0.026256
+    },
+    "per_family_between": {
+      "bowed": -0.019336,
+      "plucked": -0.047722,
+      "wind": -0.041494
+    }
+  }
+}

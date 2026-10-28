@@ -1,0 +1,103 @@
+{
+  "n_wav": 6705,
+  "n_class": 11,
+  "encoders": {
+    "beats": {
+      "sil_proto_class": 0.204145,
+      "exact_p": 0.0005339105339105339,
+      "n_assignments": 831600,
+      "family_sizes": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "family_names": [
+        "bowed_strings",
+        "brass",
+        "keys",
+        "plucked_strings",
+        "voice",
+        "woodwind"
+      ],
+      "null_mean": -0.214504,
+      "null_q99": 0.066414,
+      "observed_in_null_space": true
+    },
+    "mert": {
+      "sil_proto_class": -0.305347,
+      "exact_p": 0.4014718614718615,
+      "n_assignments": 831600,
+      "family_sizes": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "family_names": [
+        "bowed_strings",
+        "brass",
+        "keys",
+        "plucked_strings",
+        "voice",
+        "woodwind"
+      ],
+      "null_mean": -0.317558,
+      "null_q99": 0.019094,
+      "observed_in_null_space": true
+    },
+    "ast": {
+      "sil_proto_class": 0.193944,
+      "exact_p": 0.0008225108225108225,
+      "n_assignments": 831600,
+      "family_sizes": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "family_names": [
+        "bowed_strings",
+        "brass",
+        "keys",
+        "plucked_strings",
+        "voice",
+        "woodwind"
+      ],
+      "null_mean": -0.241031,
+      "null_q99": 0.063617,
+      "observed_in_null_space": true
+    },
+    "audiomae": {
+      "sil_proto_class": -0.375852,
+      "exact_p": 0.5403607503607504,
+      "n_assignments": 831600,
+      "family_sizes": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "family_names": [
+        "bowed_strings",
+        "brass",
+        "keys",
+        "plucked_strings",
+        "voice",
+        "woodwind"
+      ],
+      "null_mean": -0.352574,
+      "null_q99": 0.017297,
+      "observed_in_null_space": true
+    }
+  },
+  "elapsed_sec": 21.6
+}

@@ -1,0 +1,113 @@
+{
+  "note": "dev gallery (9,573) to test query (2,393); after L2 normalisation the inner product is the cosine; the top k are taken exactly with argsort",
+  "n_gallery": 9573,
+  "n_query": 2393,
+  "encoders": {
+    "beats": {
+      "instrument": {
+        "R@1": 0.951525282072712,
+        "R@5": 0.9908065190137902,
+        "R@10": 0.994985374007522
+      },
+      "family": {
+        "R@1": 0.9699122440451317,
+        "R@5": 0.9979105725031342,
+        "R@10": 0.9991642290012537
+      },
+      "instrument_buggy_argpartition": {
+        "R@1": 0.9486000835770999,
+        "R@5": 0.9916422900125366,
+        "R@10": 0.9945674885081488
+      },
+      "instrument_R@1_argmax": 0.951525282072712,
+      "crosscheck_bootstrap_ci_r1_ins": 0.951525282072712,
+      "crosscheck_e2_part4_R@1_instrument": 0.9486000835770999,
+      "delta_vs_bootstrap_ci": 0.0
+    },
+    "mert": {
+      "instrument": {
+        "R@1": 0.9398244880902633,
+        "R@5": 0.9870455495194317,
+        "R@10": 0.9916422900125366
+      },
+      "family": {
+        "R@1": 0.9661512745507731,
+        "R@5": 0.9983284580025074,
+        "R@10": 0.9991642290012537
+      },
+      "instrument_buggy_argpartition": {
+        "R@1": 0.9239448391140828,
+        "R@5": 0.9857918930213122,
+        "R@10": 0.9916422900125366
+      },
+      "instrument_R@1_argmax": 0.9389887170915169,
+      "crosscheck_bootstrap_ci_r1_ins": 0.9389887170915169,
+      "crosscheck_e2_part4_R@1_instrument": 0.9239448391140828,
+      "delta_vs_bootstrap_ci": 0.0008357709987464323
+    },
+    "ast": {
+      "instrument": {
+        "R@1": 0.9410781445883828,
+        "R@5": 0.9899707480150439,
+        "R@10": 0.9924780610112829
+      },
+      "family": {
+        "R@1": 0.9699122440451317,
+        "R@5": 0.9983284580025074,
+        "R@10": 0.9991642290012537
+      },
+      "instrument_buggy_argpartition": {
+        "R@1": 0.9377350605933974,
+        "R@5": 0.9903886335144171,
+        "R@10": 0.9924780610112829
+      },
+      "instrument_R@1_argmax": 0.9402423735896365,
+      "crosscheck_bootstrap_ci_r1_ins": 0.9402423735896365,
+      "crosscheck_e2_part4_R@1_instrument": 0.9377350605933974,
+      "delta_vs_bootstrap_ci": 0.0008357709987463213
+    },
+    "audiomae": {
+      "instrument": {
+        "R@1": 0.7145842039281237,
+        "R@5": 0.9277058086084413,
+        "R@10": 0.9669870455495194
+      },
+      "family": {
+        "R@1": 0.9130798161303803,
+        "R@5": 0.987881320518178,
+        "R@10": 0.9941496030087756
+      },
+      "instrument_buggy_argpartition": {
+        "R@1": 0.6389469285415796,
+        "R@5": 0.92227329711659,
+        "R@10": 0.9669870455495194
+      },
+      "instrument_R@1_argmax": 0.7137484329293774,
+      "crosscheck_bootstrap_ci_r1_ins": 0.7137484329293774,
+      "crosscheck_e2_part4_R@1_instrument": 0.6389469285415796,
+      "delta_vs_bootstrap_ci": 0.0008357709987463213
+    },
+    "mfcc": {
+      "instrument": {
+        "R@1": 0.8921855411617217,
+        "R@5": 0.9778520685332219,
+        "R@10": 0.9862097785206854
+      },
+      "family": {
+        "R@1": 0.9544504805683243,
+        "R@5": 0.9970748015043878,
+        "R@10": 0.9983284580025074
+      },
+      "instrument_buggy_argpartition": {
+        "R@1": 0.8244880902632679,
+        "R@5": 0.9753447555369829,
+        "R@10": 0.9857918930213122
+      },
+      "instrument_R@1_argmax": 0.8909318846636022,
+      "crosscheck_bootstrap_ci_r1_ins": 0.8909318846636022,
+      "crosscheck_e2_part4_R@1_instrument": 0.8244880902632679,
+      "delta_vs_bootstrap_ci": 0.001253656498119482
+    }
+  },
+  "elapsed_sec": 15.4
+}

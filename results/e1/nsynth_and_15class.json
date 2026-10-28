@@ -1,0 +1,148 @@
+{
+  "nsynth": [
+    {
+      "encoder": "beats",
+      "label": "BEATs",
+      "sil_fam": 0.0972709134221077,
+      "loo_fam": 1.0,
+      "within": 0.5364088416099548,
+      "between": 0.37502917647361755,
+      "delta": 0.16137966513633728
+    },
+    {
+      "encoder": "mert",
+      "label": "MERT-v2",
+      "sil_fam": -0.10761114209890366,
+      "loo_fam": 1.0,
+      "within": 0.8051513433456421,
+      "between": 0.7710669636726379,
+      "delta": 0.03408437967300415
+    },
+    {
+      "encoder": "ast",
+      "label": "AST",
+      "sil_fam": 0.03655568137764931,
+      "loo_fam": 1.0,
+      "within": 0.9431206583976746,
+      "between": 0.9244871139526367,
+      "delta": 0.018633544445037842
+    },
+    {
+      "encoder": "audiomae",
+      "label": "AudioMAE",
+      "sil_fam": -0.06295625865459442,
+      "loo_fam": 1.0,
+      "within": 0.9894977807998657,
+      "between": 0.987648606300354,
+      "delta": 0.0018491744995117188
+    }
+  ],
+  "folk15": [
+    {
+      "encoder": "beats",
+      "label": "BEATs",
+      "sil_15": 0.2009604424238205,
+      "loo_15": 0.9888227305964692
+    },
+    {
+      "encoder": "mert",
+      "label": "MERT-v2",
+      "sil_15": -0.044349730014801025,
+      "loo_15": 0.9911208607542046
+    },
+    {
+      "encoder": "ast",
+      "label": "AST",
+      "sil_15": 0.1319810152053833,
+      "loo_15": 0.9926877676799332
+    },
+    {
+      "encoder": "audiomae",
+      "label": "AudioMAE",
+      "sil_15": -0.33656251430511475,
+      "loo_15": 0.9928966886033637
+    }
+  ],
+  "per_class": [
+    {
+      "encoder": "beats",
+      "class_acc": {
+        "ba": 1.0,
+        "dizi": 1.0,
+        "dongxiao": 1.0,
+        "erhu": 1.0,
+        "guqin": 1.0,
+        "guzheng": 0.9342492639842983,
+        "hulusi": 1.0,
+        "liuqin": 1.0,
+        "pipa": 1.0,
+        "sanxian": 1.0,
+        "sheng": 1.0,
+        "suona": 0.9989304812834224,
+        "yangqin": 1.0,
+        "zhongruan": 1.0,
+        "zhuiqin": 1.0
+      }
+    },
+    {
+      "encoder": "mert",
+      "class_acc": {
+        "ba": 1.0,
+        "dizi": 1.0,
+        "dongxiao": 1.0,
+        "erhu": 1.0,
+        "guqin": 1.0,
+        "guzheng": 0.9342492639842983,
+        "hulusi": 1.0,
+        "liuqin": 1.0,
+        "pipa": 1.0,
+        "sanxian": 1.0,
+        "sheng": 1.0,
+        "suona": 0.9989304812834224,
+        "yangqin": 1.0,
+        "zhongruan": 1.0,
+        "zhuiqin": 1.0
+      }
+    },
+    {
+      "encoder": "ast",
+      "class_acc": {
+        "ba": 1.0,
+        "dizi": 1.0,
+        "dongxiao": 1.0,
+        "erhu": 1.0,
+        "guqin": 1.0,
+        "guzheng": 0.9342492639842983,
+        "hulusi": 1.0,
+        "liuqin": 1.0,
+        "pipa": 1.0,
+        "sanxian": 1.0,
+        "sheng": 1.0,
+        "suona": 0.9989304812834224,
+        "yangqin": 1.0,
+        "zhongruan": 1.0,
+        "zhuiqin": 1.0
+      }
+    },
+    {
+      "encoder": "audiomae",
+      "class_acc": {
+        "ba": 1.0,
+        "dizi": 1.0,
+        "dongxiao": 1.0,
+        "erhu": 1.0,
+        "guqin": 1.0,
+        "guzheng": 0.9342492639842983,
+        "hulusi": 1.0,
+        "liuqin": 1.0,
+        "pipa": 1.0,
+        "sanxian": 1.0,
+        "sheng": 1.0,
+        "suona": 0.9989304812834224,
+        "yangqin": 1.0,
+        "zhongruan": 1.0,
+        "zhuiqin": 1.0
+      }
+    }
+  ]
+}

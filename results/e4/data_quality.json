@@ -1,0 +1,332 @@
+{
+  "saraga_hindustani": {
+    "manifest_rows": 108,
+    "audio_missing_or_bad": [],
+    "json_bad": [],
+    "sample_rate": {
+      "44100": 101,
+      "48000": 7
+    },
+    "channels": {
+      "2": 108
+    },
+    "dur_deviation_over_2pct": [
+      {
+        "id": "Raag Kalyan, Bhimpalasi & Dhani by Satyasheel Deshpande__Raag Bhimpalasi",
+        "file_dur": 1906.94,
+        "meta_dur": 2006.0,
+        "rel_dev": 0.0494
+      },
+      {
+        "id": "Raag Shree by Deborshee Bhattacharya__Raag Shree",
+        "file_dur": 3053.56,
+        "meta_dur": 3135.0,
+        "rel_dev": 0.026
+      }
+    ],
+    "n_dur_checked": 108,
+    "dur_max_rel_dev": 0.0494,
+    "total_audio_hours": 43.59,
+    "n_performance": 36,
+    "n_raag_common": 76,
+    "n_lead_artist": 22,
+    "n_missing_lead_artist": 2
+  },
+  "saraga_carnatic_extracted": {
+    "n_files": 318,
+    "kinds": {
+      "mix": 106,
+      "violin": 106,
+      "vocal": 106
+    },
+    "n_items_with_stems": 168,
+    "manifest_pairs_missing": [
+      {
+        "item": "Athirum Kazhal",
+        "kind": "mix",
+        "name": "Athirum Kazhal.mp3.mp3"
+      },
+      {
+        "item": "Athirum Kazhal",
+        "kind": "violin",
+        "name": "Athirum Kazhal.multitrack-violin.mp3"
+      },
+      {
+        "item": "Athirum Kazhal",
+        "kind": "vocal",
+        "name": "Athirum Kazhal.multitrack-vocal.mp3"
+      },
+      {
+        "item": "Kanukontini",
+        "kind": "mix",
+        "name": "Kanukontini.mp3.mp3"
+      },
+      {
+        "item": "Kanukontini",
+        "kind": "violin",
+        "name": "Kanukontini.multitrack-violin.mp3"
+      },
+      {
+        "item": "Kanukontini",
+        "kind": "vocal",
+        "name": "Kanukontini.multitrack-vocal.mp3"
+      },
+      {
+        "item": "Shloka Sri Ramachandra Shrita Parijata",
+        "kind": "mix",
+        "name": "Shloka Sri Ramachandra Shrita Parijata.mp3.mp3"
+      },
+      {
+        "item": "Shloka Sri Ramachandra Shrita Parijata",
+        "kind": "violin",
+        "name": "Shloka Sri Ramachandra Shrita Parijata.multitrack-violin.mp3"
+      },
+      {
+        "item": "Shloka Sri Ramachandra Shrita Parijata",
+        "kind": "vocal",
+        "name": "Shloka Sri Ramachandra Shrita Parijata.multitrack-vocal.mp3"
+      },
+      {
+        "item": "Siva Siva Siva Yenarada",
+        "kind": "mix",
+        "name": "Siva Siva Siva Yenarada.mp3.mp3"
+      },
+      {
+        "item": "Siva Siva Siva Yenarada",
+        "kind": "violin",
+        "name": "Siva Siva Siva Yenarada.multitrack-violin.mp3"
+      },
+      {
+        "item": "Siva Siva Siva Yenarada",
+        "kind": "vocal",
+        "name": "Siva Siva Siva Yenarada.multitrack-vocal.mp3"
+      },
+      {
+        "item": "Sri Kantimatim",
+        "kind": "mix",
+        "name": "Sri Kantimatim.mp3.mp3"
+      },
+      {
+        "item": "Sri Kantimatim",
+        "kind": "violin",
+        "name": "Sri Kantimatim.multitrack-violin.mp3"
+      },
+      {
+        "item": "Sri Kantimatim",
+        "kind": "vocal",
+        "name": "Sri Kantimatim.multitrack-vocal.mp3"
+      },
+      {
+        "item": "Varashiki Vahana",
+        "kind": "mix",
+        "name": "Varashiki Vahana.mp3.mp3"
+      },
+      {
+        "item": "Varashiki Vahana",
+        "kind": "violin",
+        "name": "Varashiki Vahana.multitrack-violin.mp3"
+      },
+      {
+        "item": "Varashiki Vahana",
+        "kind": "vocal",
+        "name": "Varashiki Vahana.multitrack-vocal.mp3"
+      },
+      {
+        "item": "Shloka Namaste Sarvalokaanam",
+        "kind": "mix",
+        "name": "Shloka Namaste Sarvalokaanam.mp3.mp3"
+      },
+      {
+        "item": "Shloka Namaste Sarvalokaanam",
+        "kind": "violin",
+        "name": "Shloka Namaste Sarvalokaanam.multitrack-violin.mp3"
+      }
+    ],
+    "n_manifest_pairs_missing": 171,
+    "n_dur_checked": 106,
+    "dur_max_rel_dev": 0.0655,
+    "note": "论文 Carnatic 实验直接从 zip 流式读取（e4_carnatic_*.py），本目录为 mix/violin/vocal 三轨解压副本。"
+  },
+  "sampling": {
+    "folkmusic": {
+      "path": "data/folkmusic",
+      "n_files": 11966,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "44100": 200
+      },
+      "channels": {
+        "2": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 2.133,
+      "dur_max": 3.0,
+      "dur_mean": 2.996
+    },
+    "irmas": {
+      "path": "data/irmas/IRMAS-TrainingData",
+      "n_files": 6705,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "44100": 200
+      },
+      "channels": {
+        "2": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 3.0,
+      "dur_max": 3.0,
+      "dur_mean": 3.0
+    },
+    "nsynth_train": {
+      "path": "data/nsynth/train/audio",
+      "n_files": 102165,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "16000": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 4.0,
+      "dur_max": 4.0,
+      "dur_mean": 4.0
+    },
+    "nsynth_valid": {
+      "path": "data/nsynth/valid/audio",
+      "n_files": 5124,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "16000": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 4.0,
+      "dur_max": 4.0,
+      "dur_mean": 4.0
+    },
+    "nsynth_test": {
+      "path": "data/nsynth/test/audio",
+      "n_files": 1689,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "16000": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 4.0,
+      "dur_max": 4.0,
+      "dur_mean": 4.0
+    },
+    "medley": {
+      "path": "data/supp/medley-solos-db/extracted",
+      "n_files": 3200,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "44100": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "FLOAT": 200
+      },
+      "dur_min": 2.972,
+      "dur_max": 2.972,
+      "dur_mean": 2.972
+    },
+    "brid": {
+      "path": "data/supp/brid/extracted",
+      "n_files": 274,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "44100": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 21.635,
+      "dur_max": 43.388,
+      "dur_mean": 28.957
+    },
+    "mridangam": {
+      "path": "data/supp/mridangam-stroke/extracted",
+      "n_files": 1200,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "44100": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "PCM_16": 200
+      },
+      "dur_min": 0.105,
+      "dur_max": 2.344,
+      "dur_mean": 0.427
+    },
+    "beijing": {
+      "path": "data/supp/beijing-opera-percussion/extracted",
+      "n_files": 236,
+      "n_sampled": 200,
+      "n_ok": 200,
+      "n_bad": 0,
+      "bad": [],
+      "sample_rate": {
+        "44100": 200
+      },
+      "channels": {
+        "1": 200
+      },
+      "subtype": {
+        "FLOAT": 200
+      },
+      "dur_min": 0.116,
+      "dur_max": 6.444,
+      "dur_mean": 1.567
+    }
+  }
+}

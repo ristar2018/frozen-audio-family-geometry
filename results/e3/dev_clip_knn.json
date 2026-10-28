@@ -1,0 +1,22 @@
+{
+  "beats": {
+    "n": 9573,
+    "knn_family_loo": 0.974198
+  },
+  "mert": {
+    "n": 9573,
+    "knn_family_loo": 0.968348
+  },
+  "ast": {
+    "n": 9573,
+    "knn_family_loo": 0.974094
+  },
+  "audiomae": {
+    "n": 9573,
+    "knn_family_loo": 0.9157
+  },
+  "mfcc": {
+    "n": 9573,
+    "knn_family_loo": 0.955918
+  }
+}

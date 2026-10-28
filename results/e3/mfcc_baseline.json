@@ -1,0 +1,112 @@
+{
+  "note": "Non-neural MFCC baseline: 240 dimensions (frame mean and standard deviation of 40 MFCCs plus delta and delta-delta coefficients), StandardScaler fitted on the dev split and then L2-normalised",
+  "recomputed": {
+    "folk15_sil_exact_all_clips": -0.048527,
+    "dev_dcos_fig_within": 0.107994,
+    "dev_dcos_fig_between": -0.036184,
+    "dev_dcos_fig": 0.144178,
+    "dev_dcos_audit_fix_ref": 0.144178,
+    "abs_diff_vs_audit_fix": 1.9022155187120582e-07
+  },
+  "authoritative": {
+    "dev": {
+      "sil_real": 0.027317,
+      "sil_p": 0.03514819,
+      "sil_n_ge": 6333,
+      "sil_null_q99": 0.080559,
+      "dcos_real": 0.144178,
+      "dcos_p": 0.02150627,
+      "dcos_n_ge": 3875,
+      "dcos_null_mean": 0.060618,
+      "dcos_null_q99": 0.157062,
+      "knn_proto_real": 0.8,
+      "knn_proto_p": 0.0018315,
+      "knn_proto_n_ge": 330,
+      "knn_proto_null_mean": 0.353096,
+      "knn_proto_null_q99": 0.733333,
+      "knn_proto_correct_of_15": 12,
+      "pass_a05": true,
+      "pass_a01": false
+    },
+    "test": {
+      "sil_real": 0.046183,
+      "sil_p": 0.02297147,
+      "sil_n_ge": 4139,
+      "sil_null_q99": 0.080144,
+      "dcos_real": 0.145342,
+      "dcos_p": 0.01719392,
+      "dcos_n_ge": 3098,
+      "dcos_null_mean": 0.060575,
+      "dcos_null_q99": 0.156802,
+      "knn_proto_real": 0.8,
+      "knn_proto_p": 0.00199245,
+      "knn_proto_n_ge": 359,
+      "knn_proto_null_mean": 0.353331,
+      "knn_proto_null_q99": 0.733333,
+      "knn_proto_correct_of_15": 12,
+      "pass_a05": true,
+      "pass_a01": false
+    },
+    "dev_clip_knn": {
+      "n": 9573,
+      "knn_family_loo": 0.955918
+    },
+    "folk15_perclass_overall": 0.892301,
+    "saraga": {
+      "pair_sims": {
+        "same_raag_cross_artist": {
+          "mean": 0.9547395706176758,
+          "n_pairs": 44
+        },
+        "same_raag_same_artist": {
+          "mean": 0.9249802827835083,
+          "n_pairs": 2
+        },
+        "diff_raag_same_artist": {
+          "mean": 0.9559637308120728,
+          "n_pairs": 444
+        },
+        "diff_raag_cross_artist": {
+          "mean": 0.950445294380188,
+          "n_pairs": 5075
+        }
+      },
+      "rāg_effect": 0.004294276237487793,
+      "artist_effect": 0.005518436431884766,
+      "same_raag_pair_weighted": 0.9547395706176758,
+      "same_raag_raag_equal_weighted": {
+        "mean": 0.9569798674848344,
+        "n_raag": 18
+      },
+      "n_raag_with_cross_artist_pairs": 18,
+      "raag_silhouette": -0.31705939769744873,
+      "retrieval": {
+        "R@1": 0.018867924528301886,
+        "R@5": 0.04716981132075472,
+        "R@10": 0.10377358490566038
+      },
+      "retrieval_chance": {
+        "R@1": 0.008265947888589364,
+        "R@5": 0.04065210497726124,
+        "R@10": 0.07965161631544027
+      },
+      "bootstrap": {
+        "rāg_effect(S_R-D_B)": [
+          0.004210770666599274,
+          -0.018958584964275358,
+          0.0192648246884346
+        ],
+        "artist_effect(D_A-D_B)": [
+          0.005716118425130844,
+          -0.0030837222933769227,
+          0.014549326896667481
+        ],
+        "same_raag_cross_artist": [
+          0.9546586710810662,
+          0.9277190685272216,
+          0.9712834373116493
+        ]
+      }
+    }
+  }
+}

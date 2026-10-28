@@ -1,0 +1,27 @@
+# FAPN environment (transformers 4.46.x is required for MERT / AST; AudioMAE uses timm).
+# BEATs is NOT part of any released transformers: it uses Microsoft unilm custom code
+# (github.com/microsoft/unilm, beats/BEATs.py + backbone.py) plus a .pt checkpoint.
+# See src/download_beats.ps1 and the README "Model checkpoints" section.
+
+transformers>=4.46,<4.47
+tokenizers>=0.20,<0.21
+huggingface_hub>=0.24,<0.35
+safetensors>=0.4
+
+# Audio (primary corpora are WAV; librosa/soundfile are the non-WAV fallback)
+librosa==0.10.2.post1
+soundfile==0.12.1
+scipy>=1.10
+
+# AudioMAE port
+timm>=1.0.7
+
+# Numerics / ML
+numpy>=1.24,<2.0
+pandas>=2.0
+scikit-learn>=1.3
+
+tqdm>=4.66
+
+# NOTE: install torch separately for your CUDA build, e.g. for cu128:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
