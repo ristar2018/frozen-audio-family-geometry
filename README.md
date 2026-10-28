@@ -49,7 +49,7 @@ with random-initialisation, cross-dataset, paired-stem, and same-family controls
 │   └── saraga_hindustani_manifest.csv
 ├── config/seeds.env             # fixed seeds used throughout
 ├── requirements.txt
-├── MANIFEST_SHA256.txt          # SHA-256 of every file (verify with `sha256sum -c`)
+├── MANIFEST_SHA256.txt          # SHA-256 of every file (verify: Section 8)
 └── LICENSE
 ```
 
@@ -220,6 +220,8 @@ the corpora of Section 4 and the checkpoints of Section 3.
 | `e3/irmas_emb/*.npz` (4) | `e3_external.py` | 73 MB |
 | `e4/supp/*.npy` (40), `e4/embeddings/*`, `e4/mfcc/*` | `e4_supp_prepare.py`, `e4_carnatic_mix_vs_stem.py` | 67 MB |
 | `saraga/embeddings/*.npy` (4), `projections_v2/*` | `saraga_probe_routeA.py`, `saraga_probe_routeA_v2.py` | 1 MB |
+| `e3/_proj_coords.npz` (1) | `scripts/e3_fig_umap_tsne_fix.py` | 0.5 MB |
+| **total** | 126 arrays | **833 MB** |
 
 Each stage writes its cache before analysing it, so running the commands of Section 5 in
 order rebuilds the arrays and, with them, the JSON. Feature extraction is the only
@@ -241,13 +243,32 @@ runs twelve additional models over the same two splits).
 
 ## 8. Anonymity and availability
 
-The archive is deliberately small — about 4 MB in 92 files: code, split manifests and the
-result JSON, with no audio, checkpoints, figures or feature caches. It carries no author
-names, affiliations, e-mail addresses or absolute
-local paths, and every script resolves the project root from its own location, so it can
-be shared with reviewers without disclosing more than the manuscript already does. A
-permanent DOI will replace the review-time link on acceptance; the archive contents will
-not change.
+The archive is deliberately small — about 4 MB in 92 files: code, split manifests, the
+result JSON and the SHA-256 manifest, with no audio, checkpoints, figures or feature
+caches (the 126 arrays those scripts write are listed in Section 6, and all of them
+rebuild from the public corpora). It carries no author names, affiliations, e-mail
+addresses or absolute local paths, and every script resolves the project root from its
+own location, so it can be shared with reviewers without disclosing more than the
+manuscript already does. A permanent DOI will replace the review-time link on acceptance;
+the archive contents will not change.
+
+### Verifying the download
+
+The manifest is byte-exact, so the hashes hold only if no line-ending conversion
+happened on the way — this is why `.gitattributes` sets `* -text`. After cloning:
+
+```bash
+# Linux / macOS
+sha256sum -c MANIFEST_SHA256.txt
+```
+
+```powershell
+# Windows PowerShell (no sha256sum available)
+Get-Content MANIFEST_SHA256.txt | Where-Object { $_ -and $_ -notmatch '^#' } | ForEach-Object {
+  $hash, $path = $_ -split '  ', 2
+  if ((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ne $hash.ToUpper()) { "BAD: $path" }
+}
+```
 
 ## 9. Citation
 
