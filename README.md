@@ -241,7 +241,7 @@ runs twelve additional models over the same two splits).
 
 ## 8. Anonymity and availability
 
-The archive is deliberately small — about 4 MB in 90 files: code, split manifests and the
+The archive is deliberately small — about 4 MB in 92 files: code, split manifests and the
 result JSON, with no audio, checkpoints, figures or feature caches. It carries no author
 names, affiliations, e-mail addresses or absolute
 local paths, and every script resolves the project root from its own location, so it can

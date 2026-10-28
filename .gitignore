@@ -5,7 +5,9 @@ __pycache__/
 .ipynb_checkpoints/
 
 # --- Data (downloaded; never commit audio) ---
-data/
+# NB: 'data/' would ignore the directory itself, which makes the
+# '!data/.gitkeep' re-include ineffective. 'data/*' keeps the folder.
+data/*
 !data/.gitkeep
 
 # --- Extracted embeddings / large caches ---
