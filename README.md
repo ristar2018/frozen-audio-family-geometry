@@ -12,10 +12,6 @@ with random-initialisation, cross-dataset, paired-stem, and same-family controls
 
 > The archive ships the **analysis code, the split manifests and every JSON output** the
 > manuscript reports, so each table can be checked against the file that produced it.
-> The cached embeddings (`results/**/*.npz`, `results/**/*.npy`, 833 MB) are **deliberately
-> not included**; Section 6 lists what writes each cache and how to rebuild it from the
-> corpora and checkpoints. **No audio data, pretrained checkpoints, figures, or manuscript
-> files are redistributed.** See [Data](#data) and [Model checkpoints](#model-checkpoints).
 
 ---
 
