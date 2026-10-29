@@ -241,16 +241,11 @@ runs twelve additional models over the same two splits).
   (1 of 236 Beijing-opera clips; 1 of 1,200 mridangam clips); all statistics use the
   common valid rows documented in the paper.
 
-## 8. Anonymity and availability
+## 8. Availability
 
-The archive is deliberately small — about 4 MB in 92 files: code, split manifests, the
-result JSON and the SHA-256 manifest, with no audio, checkpoints, figures or feature
-caches (the 126 arrays those scripts write are listed in Section 6, and all of them
-rebuild from the public corpora). It carries no author names, affiliations, e-mail
-addresses or absolute local paths, and every script resolves the project root from its
-own location, so it can be shared with reviewers without disclosing more than the
-manuscript already does. On acceptance the review-time link is replaced by a public
-repository; the archive contents will not change.
+The archive is 4 MB in 92 files: code, split manifests, the result JSON and the
+SHA-256 manifest, with no audio, checkpoints, figures or feature caches (Section 6
+lists what rebuilds each cache from the public corpora).
 
 ### Verifying the download
 
