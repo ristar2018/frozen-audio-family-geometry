@@ -1,0 +1,55 @@
+{
+  "note": "Fig. A.4 encoder summary; silhouette = 15 instrument-class prototypes (dev), kNN = leave-one-out clip-level family accuracy (n=9573); values reproduce Table 1 (tab:h1a) columns sil_proto and kNN_clip",
+  "n": 9573,
+  "encoders": [
+    "beats",
+    "mert",
+    "ast",
+    "audiomae",
+    "mfcc"
+  ],
+  "labels": {
+    "beats": "BEATs",
+    "mert": "MERT-v1",
+    "ast": "AST",
+    "audiomae": "AudioMAE",
+    "mfcc": "MFCC"
+  },
+  "sil_proto_dev": {
+    "beats": 0.351089,
+    "mert": 0.110508,
+    "ast": 0.335007,
+    "audiomae": 0.100234,
+    "mfcc": 0.027317
+  },
+  "loo_knn_acc": {
+    "beats": 0.974198,
+    "mert": 0.968348,
+    "ast": 0.974094,
+    "audiomae": 0.9157,
+    "mfcc": 0.955918
+  },
+  "provenance": {
+    "beats": {
+      "sil": "audit_fix.json:exact_v2.dev.beats.sil_real",
+      "knn": "fig_fix.json:loo_knn_acc.beats"
+    },
+    "mert": {
+      "sil": "audit_fix.json:exact_v2.dev.mert.sil_real",
+      "knn": "fig_fix.json:loo_knn_acc.mert"
+    },
+    "ast": {
+      "sil": "audit_fix.json:exact_v2.dev.ast.sil_real",
+      "knn": "fig_fix.json:loo_knn_acc.ast"
+    },
+    "audiomae": {
+      "sil": "audit_fix.json:exact_v2.dev.audiomae.sil_real",
+      "knn": "fig_fix.json:loo_knn_acc.audiomae"
+    },
+    "mfcc": {
+      "sil": "mfcc_baseline.json:authoritative.dev.sil_real",
+      "knn": "mfcc_baseline.json:authoritative.dev_clip_knn.knn_family_loo"
+    }
+  },
+  "figure_title": "Encoder summary (dev, n=9,573)"
+}

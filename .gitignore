@@ -12,6 +12,7 @@ data/*
 
 # --- Extracted embeddings / large caches ---
 results/**/embeddings/
+results/**/figures/
 *.npz
 *.npy
 *.pt

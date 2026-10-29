@@ -36,7 +36,8 @@ with random-initialisation, cross-dataset, paired-stem, and same-family controls
 ├── scripts/
 │   ├── e1_visualization_pack.py #   overview figures + HTML report from cached results
 │   ├── e3_fig_umap_tsne_fix.py  #   main-text UMAP / t-SNE panels
-│   ├── e3_fig_fix.py            #   confusion-matrix and encoder-comparison panels
+│   ├── e3_fig_fix.py            #   confusion-matrix panel
+│   ├── e3_fig_s3_fix.py         #   encoder summary panel (four encoders + MFCC)
 │   └── e3_fig_familybar_fix.py  #   within/between cosine bar panel
 ├── results/                     # the JSON of every script (cached embeddings not shipped)
 ├── manifests/                   # sample lists that define every split and sampling rule
@@ -161,6 +162,7 @@ python src/e3_retrieval_fix.py
 python scripts/e1_visualization_pack.py
 python scripts/e3_fig_umap_tsne_fix.py
 python scripts/e3_fig_fix.py
+python scripts/e3_fig_s3_fix.py
 python scripts/e3_fig_familybar_fix.py
 ```
 
@@ -239,7 +241,7 @@ runs twelve additional models over the same two splits).
 
 ## 8. Availability
 
-The archive is 4 MB in 92 files: code, split manifests, the result JSON and the
+The archive is 4 MB in 94 files: code, split manifests, the result JSON and the
 SHA-256 manifest, with no audio, checkpoints, figures or feature caches (Section 6
 lists what rebuilds each cache from the public corpora).
 
