@@ -5,7 +5,7 @@ FAPN E3, review strengthening (E3-9): formal validation on external datasets
 Answers R1/R2: "does the structure hold only on FolkMusic?"
   stage nsynth (CPU, reuses the existing embeddings): promote NSynth from "exploratory" to a formal external validation --
     entity-prototype family silhouette + permutation p, a genuine family-level LOO-kNN (corrects A7), Delta-cos (sampled),
-    bootstrap 95% CI。
+    bootstrap 95% CI.
   stage irmas (GPU): the open-set IRMAS corpus (download first).
 
 Usage:

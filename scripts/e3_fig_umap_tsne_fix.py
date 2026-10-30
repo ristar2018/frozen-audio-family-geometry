@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-e3_fig_umap_tsne_fix.py -- 重建 Fig.2 (UMAP) / Fig.3 (t-SNE)
+Rebuild Fig. 2 (UMAP) and Fig. 3 (t-SNE).
 
-原因：e1_visualization_pack.py 的 ENC_LABEL 把 MERT 标为 "MERT-v2"，但论文使用的
-checkpoint 是 m-a/m-a-p/MERT-v1-330M，正文统一写作 MERT-v1。图例与正文不一致，
-故按同一参数（UMAP n_neighbors=30, min_dist=0.3, cosine, seed 20250301；
-t-SNE cosine, perplexity=30, seed 20250301）仅重建标签。
+The earlier panels labelled MERT as "MERT-v2", while the checkpoint used here is
+m-a/m-a-p/MERT-v1-330M and the paper writes MERT-v1 throughout. Only the labels
+change; the projection parameters are identical (UMAP n_neighbors=30, min_dist=0.3,
+cosine, seed 20250301; t-SNE cosine, perplexity=30, seed 20250301).
 
-输出：results/e1/figures/fig2_umap_family.png|pdf
-      results/e1/figures/fig3_tsne_family.png|pdf
+Output: results/e1/figures/fig2_umap_family.png|pdf
+        results/e1/figures/fig3_tsne_family.png|pdf
 """
 from __future__ import annotations
 
@@ -79,7 +79,7 @@ def plot_scatter_grid(coords_per_enc: dict, colors: np.ndarray, title: str,
 
 
 def cached_coords(name: str, X: np.ndarray, fn) -> np.ndarray:
-    """把 UMAP/t-SNE 坐标缓存到 npz，避免重复长计算。"""
+    """Cache UMAP/t-SNE coordinates to an npz so the long projection runs once."""
     cache = PROJ / "results" / "e3" / "_proj_coords.npz"
     key = f"{name}"
     if cache.exists():

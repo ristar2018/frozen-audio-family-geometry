@@ -1,34 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-e3_fig_s3_fix.py -- 重绘 Fig. A.4 (figS3_encoder_comparison)
+Draw Fig. A.4 (figS3_encoder_comparison): encoder summary panel.
 
-为什么有这一版：
-  1) e3_fig_fix.plot_encoder_summary() 只画四个神经编码器，没有 MFCC 基线。
-     但 main.tex 正文把这幅图描述为 "the family-level summary against which the
-     MFCC baseline of Section 4.2 is read"（Fig. A.4），图里却没有基线 —— 图文不符。
-  2) 正文 results.tex 说 "The two columns already hint at the central result of
-     the controls: instance discrimination and family-level geometry are different
-     properties." 四个编码器里 AudioMAE 两项都是最低（sil 0.100 / kNN 0.916），
-     读者读到的是 "AudioMAE 全面最弱"，而非 "两个性质不同"。补上 MFCC
-     （sil 0.027 最低、kNN 0.956 第二高）才真正展示解耦。
-  3) 图内标题原为 "Encoder summary: H1a confirmation (dev, n=9,573)"。正文从无
-     "H1a" 这一术语（只有 H1），且 AudioMAE 的 H1 判定是未通过（p=0.013 > 0.01），
-     标题写 "confirmation" 覆盖四个编码器会误导统计结论。
-  4) 与 figS2 口径统一：figS2 修正版已是五柱含 MFCC。
+Five groups: the four frozen encoders plus the non-neural MFCC baseline, so the
+figure carries the family-level summary against which the MFCC baseline of
+Section 4.2 is read. Two quantities per group, both taken from archived JSON so
+the figure reproduces without the embedding caches:
+  - silhouette of the 15 instrument-class prototypes (dev)
+  - leave-one-out clip-level family kNN accuracy (dev, n=9,573)
 
-数据来源（全部来自已归档 JSON，不依赖 embedding 缓存，可在干净环境复现）：
-  - silhouette (15 instrument-class prototypes, dev) ：
-      results/e3/audit_fix.json  -> exact_v2.dev[enc].sil_real      (4 个神经编码器)
-      results/e3/mfcc_baseline.json -> authoritative.dev.sil_real    (MFCC)
-  - leave-one-out clip-level family kNN accuracy ：
-      results/e3/fig_fix.json    -> loo_knn_acc[enc]                 (4 个神经编码器)
-      results/e3/mfcc_baseline.json -> authoritative.dev_clip_knn.knn_family_loo (MFCC)
+Sources:
+  silhouette, four encoders   results/e3/audit_fix.json    exact_v2.dev[enc].sil_real
+  silhouette, MFCC            results/e3/mfcc_baseline.json authoritative.dev.sil_real
+  LOO kNN, four encoders      results/e3/fig_fix.json      loo_knn_acc[enc]
+  LOO kNN, MFCC               results/e3/mfcc_baseline.json authoritative.dev_clip_knn.knn_family_loo
 
-两者均与正文 Table 1 (tab:h1a) 的 sil_proto 与 kNN_clip 两列逐位一致。
+Both quantities match the sil_proto and kNN_clip columns of Table 1.
 
-输出：
+Output:
   results/e1/figures/figS3_encoder_comparison.png / .pdf
-  results/e3/fig_s3.json   （审计用：数值 + 来源指针）
+  results/e3/fig_s3.json   (audit trail: values and provenance pointers)
 """
 from __future__ import annotations
 
@@ -47,12 +38,12 @@ E3 = PROJ / "results" / "e3"
 FIG_DIR = PROJ / "results" / "e1" / "figures"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 
-# 顺序与 figS2 (e3_fig_familybar_fix.ENC) 保持一致
+# Same group order as figS2 (e3_fig_familybar_fix.ENC).
 ENC = ["beats", "mert", "ast", "audiomae", "mfcc"]
 LABEL = {"beats": "BEATs", "mert": "MERT-v1", "ast": "AST",
          "audiomae": "AudioMAE", "mfcc": "MFCC"}
 
-# 正文 Table 1 (tab:h1a) 期望值，用于交叉校验；不一致即中止
+# Table 1 values, used as a cross-check; abort on mismatch.
 EXPECT_SIL = {"beats": 0.351, "mert": 0.111, "ast": 0.335,
               "audiomae": 0.100, "mfcc": 0.027}
 EXPECT_KNN = {"beats": 0.974, "mert": 0.968, "ast": 0.974,
@@ -92,15 +83,15 @@ def load_values() -> tuple[dict, dict, dict]:
 
 
 def check_against_table(sils: dict, accs: dict) -> None:
-    """与正文 Table 1 的三位小数逐项对齐，防止数据源漂移。"""
+    """Cross-check against Table 1 at three decimals to catch source drift."""
     bad = []
     for e in ENC:
         if round(sils[e], 3) != EXPECT_SIL[e]:
             bad.append(f"sil[{e}] {sils[e]:.6f} -> {round(sils[e], 3)} != {EXPECT_SIL[e]}")
         if round(accs[e], 3) != EXPECT_KNN[e]:
             bad.append(f"knn[{e}] {accs[e]:.6f} -> {round(accs[e], 3)} != {EXPECT_KNN[e]}")
-    assert not bad, "与 Table 1 不一致：\n  " + "\n  ".join(bad)
-    print("[check] 五个编码器的 sil / kNN 与正文 Table 1 逐项一致")
+    assert not bad, "values differ from Table 1:\n  " + "\n  ".join(bad)
+    print("[check] sil / kNN of all five groups match Table 1")
 
 
 def plot_encoder_summary(sils: dict, accs: dict, save_stem: Path) -> None:
@@ -119,7 +110,8 @@ def plot_encoder_summary(sils: dict, accs: dict, save_stem: Path) -> None:
     ax.set_xticklabels([LABEL[e] for e in ENC], fontsize=10.5)
     ax.set_ylim(min(-0.05, min(sils.values()) - 0.06), 1.06)
     ax.set_ylabel("Score", fontsize=12)
-    # 去掉 "H1a"：正文无此术语，且 "confirmation" 会与 AudioMAE 的未通过判定冲突
+    # Title omits "H1a" (the term never appears in the paper) and "confirmation"
+    # (AudioMAE fails H1, p=0.013).
     ax.set_title("Encoder summary (dev, n=9,573)", fontsize=13, fontweight="bold")
     ax.legend(fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.10),
               ncol=2, frameon=False)

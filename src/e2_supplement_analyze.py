@@ -452,7 +452,7 @@ def part4_downstream(feats, n_repeat, rng):
         print(f"{ENC_LABEL[w]:12s}" + "".join(f"  {means[s]:5.3f}" for s in SHOTS))
     print("  (std in the JSON)")
 
-    # ---- 4b retrieval Recall@k（dev=gallery, test=query）----
+    # ---- 4b retrieval Recall@k (dev = gallery, test = query) ----
     print(f"\n[4b] retrieval Recall@k (dev gallery -> test query; family / instrument levels)")
     print(f"{'feature':12s}" + "".join(f"  R@{k}-fam" for k in RECALL_KS)
           + "".join(f"  R@{k}-ins" for k in RECALL_KS))

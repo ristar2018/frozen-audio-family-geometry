@@ -4,8 +4,8 @@ Route A v2: fine-grained raag labels.
 
 Reads cached 4-encoder embeddings + Saraga manifest.
 Adds fine-grained label layer:
-  - top-20 most common raag_common (top-20着色 + 其余灰)
-  - all 76 unique raag_common as fine labels (sil 计算)
+  - top-20 most common raag_common (top-20 coloured, the rest grey)
+  - all 76 unique raag_common as fine labels (silhouette)
 Recomputes metrics and regenerates HTML with 16 plots
   (4 enc × {coarse-family, top-20-raag} × {UMAP, t-SNE}).
 """
@@ -240,20 +240,21 @@ td,th{{border:1px solid #ccc;padding:6px 10px;text-align:right}}
 th{{background:#f4f4f4;text-align:center}}
 </style></head><body>
 <h2>Saraga 1.5 Hindustani · Cross-cultural Zero-shot Probe · v2 Fine-grained</h2>
-<p>108 Raag recordings × 4 encoders (768-d, L2). 双层标签：
-<b>coarse family</b> = 10-thaat 粗分组（10 族），
-<b>top-{TOPN} raag</b> = 按频次前 {TOPN} 个 unique raag_common 着色（其余灰）。</p>
+<p>108 Raag recordings × 4 encoders (768-d, L2). Two label layers:
+<b>coarse family</b> = 10-thaat grouping (10 families),
+<b>top-{TOPN} raag</b> = the {TOPN} most frequent raag_common labels coloured, the rest grey.</p>
 {legend_block('Coarse family', coarse_cm, sorted(set(coarse_labels)))}
 {legend_block(f'Top-{TOPN} raag', top20_cm, top_raags + ['__other__'])}
-<h3>指标汇总</h3>
+<h3>Metric summary</h3>
 <table><tr><th>encoder</th><th>sil(coarse)</th><th>sil(top-{TOPN})</th>
 <th>cos(coarse)</th><th>cos(top-{TOPN})</th></tr>
 {"".join(f"<tr><td>{r['encoder']}</td><td>{r['sil_coarse']:+.3f}</td>"
          f"<td>{r['sil_top20']:+.3f}</td><td>{r['cos_coarse']:.3f}</td>"
          f"<td>{r['cos_top20']:.3f}</td></tr>" for r in rows)}
 </table>
-<p><b>解读</b>：sil 从负到正 = 标签粒度与特征结构对齐度；cos 高 = 同 Raag 跨艺术家一致性
-（最强正面信号：4 编码器全部 ≥ 0.84，AST 达 0.95）。</p>
+<p><b>Reading</b>: sil rising from negative to positive tracks how well the label
+granularity matches the feature structure; high cos indicates cross-artist consistency
+within a raag (the strongest positive signal: all four encoders ≥ 0.84, AST 0.95).</p>
 {"".join(cards)}
 </body></html>""", encoding="utf-8")
 print(f"\nHTML v2 -> {HTML_PATH}")

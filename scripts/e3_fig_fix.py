@@ -1,25 +1,28 @@
 # -*- coding: utf-8 -*-
 """
-e3_fig_fix.py -- 用真实 LOO kNN 重建两张补充图（figS1 / figS3）
+Rebuild the two supplementary figures (figS1 / figS3) with true leave-one-out kNN.
 
-背景：e1_visualization_pack.family_knn_prediction() 名为 "Leave-one-out KNN"，
-实际执行 knn.fit(X, y); knn.predict(X) —— 未排除 query 自身，属自泄漏。
-论文正文已改用真 LOO（results/e3/dev_clip_knn.json），故图中数字必须同步重建，
-否则图文不一致。
+`e1_visualization_pack.family_knn_prediction()` is labelled leave-one-out but fits
+and predicts on the same matrix, so every query is its own nearest neighbour. The
+paper reports the true LOO numbers (results/e3/dev_clip_knn.json), and the panels
+are rebuilt here under the same protocol so that figures and tables agree.
 
-本脚本：
-  1) 对 4 个 encoder 在 FolkMusic dev (n=9573, 3 families) 上做真 LOO kNN
-     (k=5, cosine, distance-weighted, 排除 query 自身)
-  2) 重建 figS1_confusion_matrix.png（归一化混淆矩阵 + diag=accuracy）
-  3) 重建 figS3_encoder_comparison.png
-     - silhouette 柱：prototype-level family silhouette（取自 results/e3/audit_fix.json
-       的 exact_v2.dev，即正文确证统计量）
-     - kNN 柱：真 LOO clip-level family accuracy
-  4) 落盘 results/e3/fig_fix.json
+Steps:
+  1) true LOO kNN for the four encoders on FolkMusic dev (n=9,573, 3 families):
+     k=5, cosine, distance-weighted, query excluded from its own neighbourhood
+  2) rebuild figS1_confusion_matrix.png (row-normalised, diagonal = accuracy)
+  3) rebuild figS3_encoder_comparison.png
+     - silhouette bars: prototype-level family silhouette from
+       results/e3/audit_fix.json (exact_v2.dev)
+     - kNN bars: true LOO clip-level family accuracy
+  4) write results/e3/fig_fix.json
 
-输出：results/e1/figures/figS1_confusion_matrix.png
-      results/e1/figures/figS3_encoder_comparison.png
-      results/e3/fig_fix.json
+The figS3 written here has four groups; scripts/e3_fig_s3_fix.py overwrites it with
+the five-group version used in the paper.
+
+Output: results/e1/figures/figS1_confusion_matrix.png
+        results/e1/figures/figS3_encoder_comparison.png
+        results/e3/fig_fix.json
 """
 from __future__ import annotations
 
@@ -62,7 +65,7 @@ def l2norm(X: np.ndarray) -> np.ndarray:
 
 
 def loo_predict(X: np.ndarray, y: np.ndarray, k: int = K, chunk: int = CHUNK) -> np.ndarray:
-    """真 LOO kNN：cosine 相似度，distance-weighted 投票，排除 query 自身。"""
+    """True LOO kNN: cosine similarity, distance-weighted vote, query excluded."""
     X = l2norm(X)
     labels = np.asarray(y)
     classes, inv = np.unique(labels, return_inverse=True)
@@ -72,7 +75,7 @@ def loo_predict(X: np.ndarray, y: np.ndarray, k: int = K, chunk: int = CHUNK) ->
         e = min(s + chunk, n)
         S = X[s:e] @ X.T
         rows = np.arange(e - s)
-        S[rows, np.arange(s, e)] = -np.inf  # 排除自身
+        S[rows, np.arange(s, e)] = -np.inf  # exclude the query itself
         idx = np.argpartition(-S, k, axis=1)[:, :k]
         d = np.take_along_axis(S, idx, axis=1)
         lab = inv[idx]
@@ -85,7 +88,7 @@ def loo_predict(X: np.ndarray, y: np.ndarray, k: int = K, chunk: int = CHUNK) ->
 
 
 def plot_confusion_grid(y_true, y_pred_per_enc: dict, save_path: Path) -> None:
-    # 2026-10-27: 11x10 -> 11x9.2，压缩纵向留白（宽度不变，图中字号不缩）
+    # Shorter canvas (11x9.2) trims vertical whitespace; width and font sizes unchanged.
     fig, axes = plt.subplots(2, 2, figsize=(11, 9.2))
     axes = axes.flatten()
     for ax, enc in zip(axes, ENCODERS):
@@ -104,7 +107,7 @@ def plot_confusion_grid(y_true, y_pred_per_enc: dict, save_path: Path) -> None:
     fig.suptitle("Family-level leave-one-out kNN (k=5, cos)",
                  fontsize=15, fontweight="bold", y=1.00)
     fig.tight_layout()
-    # 2026-10-27: 上排 xlabel "Predicted" 与下排面板标题重叠，显式留出行距
+    # Extra row gap: the top-row xlabel would otherwise collide with the bottom panel titles.
     fig.subplots_adjust(hspace=0.32)
     fig.savefig(save_path, dpi=400, bbox_inches="tight")
     plt.close(fig)
@@ -130,7 +133,7 @@ def plot_encoder_summary(sils: dict, accs: dict, save_path: Path) -> None:
     ax.set_ylabel("Score", fontsize=12)
     ax.set_title("Encoder summary: H1a confirmation (dev, n=9,573)",
                  fontsize=13, fontweight="bold")
-    # 2026-10-27: 图例原在 lower right，压住 AudioMAE 柱体，移到坐标轴下方
+    # Legend below the axes: at lower right it covered the AudioMAE bars.
     ax.legend(fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.10),
               ncol=2, frameon=False)
     fig.tight_layout()

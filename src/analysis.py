@@ -5,7 +5,7 @@ FAPN E1 analysis functions (protocol: Sections 3.4 and 3.5 of the paper)
 Confirmatory part (H1a; FolkMusic only, frozen phi, 80% development split):
     - class-level restricted permutation test (instrument class to family surjection), preserving the per-family class counts 6/2/7
     - permutation unit = instrument-class prototype, N = 2000
-    - p = (1 + #{sil_perm >= sil_real}) / (N + 1)，Phipson & Smyth (2010)
+    - p = (1 + #{sil_perm >= sil_real}) / (N + 1); Phipson & Smyth (2010)
     - decision: p < 0.01; conjunction over the four encoders (the conjunction is an internal rule of H1a, not a multiple-testing correction)
 
 Descriptive part (fragment-level phi, no p-values):
@@ -99,7 +99,7 @@ def class_level_permutation_test(
       2) observed statistic = silhouette (cosine) of the prototype space grouped by true family;
       3) restricted permutation: keep the number of classes per family fixed, assign the K classes to families at random
          (a surjection onto the families) and recompute the prototype silhouette each time;
-      4) p = (1 + #{sil_perm >= sil_real}) / (N + 1)。
+      4) p = (1 + #{sil_perm >= sil_real}) / (N + 1).
 
     Args:
         embeddings: (N, D) development-split fragment embeddings (phi)
